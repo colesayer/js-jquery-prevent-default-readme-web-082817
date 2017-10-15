@@ -1,9 +1,10 @@
 $(document).ready(function(){
-  
+
   // browser refreshes on submit
-  $('form').on('submit', function(){
+  $('form').on('submit', function(ev){
     var name = $('#name').val();
     $("#hello").text("Hello, " + name);
+    ev.preventDefault()
   });
 
   //examine event object
